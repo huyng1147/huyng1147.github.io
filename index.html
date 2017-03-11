@@ -55,61 +55,180 @@
       </div><!-- /.navbar -->
     </div>
 
+    <div class="panel panel-default panel-primary quotePanel">
+      <div class="panel-body">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators" style="display: none">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner quoteInner" role="listbox">
+            <div class="item active" style="padding: 20px;text-align: center; border-radius: 5px">
+              <p><b>“Everything will be okay in the end. If it's not okay, it's not the end.”</b></p>
+              <p><i>John Lennon</i></p>
+              <!-- <div class="carousel-caption">
+              </div> -->
+            </div>
+            <div class="item" style="padding: 20px;text-align: center;">
+              <p><b>"First, solve the problem. Then, write the code."</b></p>
+              <p><i>John Johnson</i></p>
+              <!-- <div class="carousel-caption">
+              </div> -->
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div> 
+      </div>
+    </div>
 
     <div class="panel panel-default panel-primary infoPanel">
       <div class="panel-heading">
         <h3 class="panel-title">CONTACT INFORMATON</h3>
       </div>
-      <div class="panel-body">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <h4 class="list-group-item-heading">Full Name</h4>
-            <p class="list-group-item-text">Huy Manh Nguyen</p>
-          </li>
-          <li class="list-group-item">
-            <h4 class="list-group-item-heading">Address</h4>
-            <p class="list-group-item-text">557 TopMiller Ave, Apt E5, Bowling Green, KY 42101</p>
-          </li>
-          <li class="list-group-item">
-            <h4 class="list-group-item-heading">Phone Number</h4>
-            <p class="list-group-item-text">270-935-0001</p>
-          </li>
-          <li class="list-group-item">
-            <h4 class="list-group-item-heading">Email</h4>
-            <p class="list-group-item-text">huy.ng1147@gmail.com</p>
-          </li>
-        </ul>
+      <div class="panel-body" style="text-align: center;">
+        <h4 class="list-group-item-heading">HUY MANH NGUYEN</h4>
+            <p>
+              <h5><span class="glyphicon glyphicon-home"></span> 557 TopMiller Ave, Apt E5, Bowling Green, KY 42101</h5>
+            </p>
+            <p>
+              <h5><span class="glyphicon glyphicon-phone"></span> 270-935-0001</h5>
+            </p>
+            <p>
+              <h5><span class="glyphicon glyphicon-envelope"></span> huy.ng1147@gmail.com</h5>
+            </p>
       </div>
     </div>
 
 
-    <div class="panel panel-default panel-success infoPanel">
+
+
+    <div class="panel panel-default panel-primary summaryDiv">
+      <ul class="nav nav-tabs summaryTab">
+        <li class="active"><a data-toggle="tab" href="#summary">Summary</a></li>
+        <li><a data-toggle="tab" href="#technical">Technical Skills</a></li>
+      </ul>
+      <div class="tab-content summaryContent">
+        <div id="summary" class="tab-pane fade in active">
+          <div class="panel panel-default panel-primary summaryPanel">
+            <!-- <div class="panel-heading">
+              <h3 class="panel-title">SUMMARY</h3>
+            </div> -->
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item">Developer of mobile app <b>“iTracking”</b> for Apple Devices
+                  <a href="https://itunes.apple.com/us/app/itracking/id592995566">(Link Here)</a>.
+                </li>
+                <li class="list-group-item">
+                  Experience in developing iOS application using <b>Google Maps, Apple APIs</b>.
+                </li>
+                <li class="list-group-item">
+                  Experience in developing mobile application using Web-based technologies <b>Cordova</b>.
+                </li>
+                <li class="list-group-item">
+                  Extensive experience in developing Enterprise applications using technologies like <b>JSP, Servlet, PrimeFaces, JSF</b>.
+                </li>
+                <li class="list-group-item">
+                  Proficient with Web Page Development using <b>HTML, JavaScript, CSS, AJAX, jQuery, jQuery Mobile</b> and <b>JSON</b>.
+                </li>
+                <li class="list-group-item">
+                  Well versed with J2EE design Patterns like <b>Session Façade, Data Access Object (DAO)</b> and <b>Business Delegate</b>.
+                </li>
+                <li class="list-group-item">
+                  Participated in <b>AGILE Development</b> methodology.
+                </li>
+                <li class="list-group-item">
+                  Experience in developing web service <b>RESTful</b>
+                </li>
+                <li class="list-group-item">
+                  Experience of working with Application servers, Web serves like <b>Apache Tomcat</b>.
+                </li>
+                <li class="list-group-item">
+                  Experience in using <b>Log4j</b> and <b>Maven</b>.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="technical" class="tab-pane fade">
+          <div class="panel panel-default panel-primary summaryPanel">
+            <!-- <div class="panel-heading">
+              <h3 class="panel-title">TECHNICAL SKILLS</h3>
+            </div> -->
+            <div class="panel-body">
+              <table class="table table-bordered table-hover">
+                <tbody>
+                  <tr>
+                    <td>Programming Language</td>
+                    <td><b>Java, C, C++, Objective C, Swift, HTML, CSS</b></td>
+                  </tr>
+                  <tr>
+                    <td>J2EE Technologies</td>
+                    <td><b>JSP, JSF, PrimeFaces</b></td>
+                  </tr>
+                  <tr>
+                    <td>Web Technologies</td>
+                    <td><b>JavaScript, CSS, JSON</b></td>
+                  </tr>
+                  <tr>
+                    <td>XML Technologies</td>
+                    <td><b>JSON, DOM Parser</b></td>
+                  </tr>
+                  <tr>
+                    <td>Databases</td>
+                    <td><b>MySQL</b></td>
+                  </tr>
+                  <tr>
+                    <td>Development Tools</td>
+                    <td><b>Eclipse</b></td>
+                  </tr>
+                  <tr>
+                    <td>Platforms</td>
+                    <td><b>Windows, MacOS, Linux</b></td>
+                  </tr>
+                  <tr>
+                    <td>Web/App Servers</td>
+                    <td><b>Apache Tomcat</b></td>
+                  </tr>
+                  <tr>
+                    <td>Design Patterns</td>
+                    <td><b>Model View Controller, Singleton, Front Controller, Session Façade, DAO Patterns</b></td>
+                  </tr>
+                  <tr>
+                    <td>Web Services</td>
+                    <td><b>RESTful</b></td>
+                  </tr>
+                  <tr>
+                    <td>Mobile Programming</td>
+                    <td><b>iOS, Cordova</b></td>
+                  </tr>
+                </tbody>
+              </table>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="panel panel-default panel-primary infoPanel">
       <div class="panel-heading">
-        <h3 class="panel-title">SUMMARY</h3>
+        <h3 class="panel-title">PROFESSIONAL EXPERIENCE</h3>
       </div>
       <div class="panel-body">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <h4 class="list-group-item-heading">Full Name</h4>
-            <p class="list-group-item-text">Huy Manh Nguyen</p>
-          </li>
-          <li class="list-group-item">
-            <h4 class="list-group-item-heading">Address</h4>
-            <p class="list-group-item-text">557 TopMiller Ave, Apt E5, Bowling Green, KY 42101</p>
-          </li>
-          <li class="list-group-item">
-            <h4 class="list-group-item-heading">Phone Number</h4>
-            <p class="list-group-item-text">270-935-0001</p>
-          </li>
-          <li class="list-group-item">
-            <h4 class="list-group-item-heading">Email</h4>
-            <p class="list-group-item-text">huy.ng1147@gmail.com</p>
-          </li>
-        </ul>
+        
       </div>
     </div>
-
-
 
 
 

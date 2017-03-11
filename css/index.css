@@ -2,11 +2,95 @@ body {
 	padding-top: 70px; 
 }
 
-.infoPanel {
+#nav .navbar {
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
+.infoPanel, .summaryPanel {
 	margin: 20px;
 	margin-top: 0px;
 }
 
-.infoPanel .list-group-item {
+.infoPanel .list-group-item, .summaryPanel .list-group-item {
 	border: none;
 }
+
+/*.summaryPanel li {
+    display: block;
+}
+*/
+
+.summaryPanel li:before {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e250";
+    font-family: 'Glyphicons Halflings';
+    font-size: 12px;
+    margin-right: 5px;
+    /*float: left;*/
+    /*margin-top: 4px;*/
+    /*margin-left: -17px;*/
+    /*color: #CCCCCC;*/
+}
+
+.summaryPanel {
+	border-top: none;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.summaryTab {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.summaryDiv {
+	/*margin: 20px;*/
+	border: none;
+}
+
+.summaryContent {
+	border-top: none;
+}
+
+.quotePanel {
+	border: none;
+	margin: 5px;
+}
+
+.quotePanel >.panel-body>div>a {
+	border-radius: 5px;
+}
+
+.quoteInner {
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+.quoteInner .item {
+	border-radius: 5px;
+	background: transparent;
+}
+
+.left.carousel-control {
+	background: transparent;
+}
+
+.left.carousel-control >.glyphicon-chevron-left {
+	color: grey;
+	font-size: 20px;
+	margin-left: -20px;
+}
+
+.right.carousel-control {
+	background: transparent;
+}
+
+.right.carousel-control >.glyphicon-chevron-right {
+	color: grey;
+	font-size: 20px;
+	margin-right: -20px;
+}
+
+
+
