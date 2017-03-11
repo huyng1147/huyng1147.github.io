@@ -1,0 +1,12 @@
+body { 
+	padding-top: 70px; 
+}
+
+.infoPanel {
+	margin: 20px;
+	margin-top: 0px;
+}
+
+.infoPanel .list-group-item {
+	border: none;
+}
