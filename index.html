@@ -22,7 +22,7 @@
   <!-- MAIN PAGE -->
   <div id="nav">
     <div class="navbar navbar-default navbar-static navbar-fixed-top">
-      <div class="container-fluid">
+      <div class="container-fluid navContainer">
         <!-- Navigation Bar Header -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -31,13 +31,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Home</a>
+          <a class="navbar-brand active" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden='true'></span></a>
         </div>
         <!-- Navigation Bar After Collapse -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <!-- Navigation Bar Left -->
           <ul class="nav navbar-nav navbar-left">
-            <!-- <li><a href="about.html">About Me</a></li> -->
+            <li><a class="" href="project.html">My Project</a></li>
             <!-- <li><a href="project.html">Project</a></li> -->
           </ul>
           <!-- Navigation Bar Right -->
@@ -50,10 +50,10 @@
     </div>
     <div class="panel panel-default panel-primary infoPanel">
       <div class="panel-body" style="text-align: center;">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
             <div class="col-md-6">
-              <div class="panel panel-default panel-primary invisiblePanel">
+              <div class="panel panel-default panel-primary">
                 <div class="panel-body">
                   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -98,18 +98,19 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="panel panel-default panel-primary invisiblePanel">
-                <div class="panel-heading clearfix">
-                	<h4 class="panel-title pull-left" style="padding-top:12px;">WEATHER INFORMATON</h4>
-                	<div class="input-group">
-	                    <div class="input-group-btn">
-	                        <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#weatherModal">
-			                    <span class="glyphicon glyphicon-pencil" aria-hidden='true'></span>
-			                  </button>
-	                    </div>
-	                </div>
-                  
-                 
+              <div class="panel panel-default panel-primary">
+                <div class="panel-heading">
+                  <h4 id="weatherHeading" class="panel-title pull-left" style="padding-top:12px;">Weather</h4>
+                  <div class="input-group">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-warning btn-lg pull-right" data-toggle="modal" data-target="#weatherModal">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden='true'></span>
+                      </button>
+                      <button type="button" id="refreshWeatherButton" class="btn btn-success btn-lg pull-right">
+                        <span class="glyphicon glyphicon-refresh" aria-hidden='true'></span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div id="weatherContent" class="panel-body" style="text-align: center;">
                 </div>
@@ -245,7 +246,7 @@
     </div>
     <!-- MODAL -->
     <div class="modal fade" id="weatherModal" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -255,7 +256,7 @@
             <h4 class="modal-title">Enter ZipCode Location</h4>
           </div>
           <div class="modal-body">
-            <input id="zipcodeInput" type="text">
+            <input id="zipcodeInput" style="width: 100%" type="text">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

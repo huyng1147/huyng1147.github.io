@@ -1,10 +1,67 @@
 body { 
-	padding-top: 70px; 
+	padding-top: 90px; 
+}
+
+.panel {
+	border-radius: 3px;
+}
+
+.panel-heading {
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
+	background: #3498db;
+}
+
+.panel-primary>.panel-heading {
+	background-color: #3498db;
+}
+
+/*Spinner*/
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
 }
 
 #nav .navbar {
 	padding-left: 10px;
 	padding-right: 5px;
+	/*margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;*/
+	background: #3498db;
+}
+
+#nav .navContainer {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.navbar-header .navbar-brand {
+	color: white;
+}
+
+.navbar-header .navbar-brand.active {
+	background: #2c3e50;
+}
+
+.navbar-collapse .navbar-left li a  {
+	color: white;
+}
+
+
+.navbar-collapse .navbar-left li a.active {
+	background: #2c3e50;
 }
 
 div#weatherModal.modal.fade.in {

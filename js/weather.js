@@ -4,16 +4,30 @@
 const WU_APIKEY = "1fa797835d7116aa";
 const WU_APIURL = "https://api.wunderground.com/api/";
 
+var currentZipcodeLocation;
+
 // Shorthand for $( document ).ready()
 $(function() {
     console.log("ready");
-    getLocationByZipCode(42101);
+    currentZipcodeLocation = 42101;
+    // getLocationByZipCode(currentZipcodeLocation);
 });
 
 $("#saveZipcodeButton").on("click", function(event) {
-	/* Act on the event */
-	console.log("saveZipcodeButton");
-	getLocationByZipCode($("#zipcodeInput").val());
+    /* Act on the event */
+    console.log("saveZipcodeButton");
+    currentZipcodeLocation = $("#zipcodeInput").val();
+    getLocationByZipCode(currentZipcodeLocation);
+    $("#weatherModal").modal('hide');
+});
+
+$('#weatherModal').on('shown.bs.modal', function() {
+    $('#zipcodeInput').focus()
+});
+
+$('#refreshWeatherButton').on('click', function(event) {
+    $('#refreshWeatherButton').find('span').addClass('glyphicon-refresh-animate');
+    getLocationByZipCode(currentZipcodeLocation);
 });
 
 function getLocationByZipCode(zipcode) {
@@ -26,7 +40,7 @@ function getLocationByZipCode(zipcode) {
         })
         .done(
             function(result) {
-            	$("#weatherContent").empty();
+                $("#weatherContent").empty();
                 if (result.response.error != null) {
                     $("#weatherContent").append(
                         "<div class='alert alert-warning alert-dismissible' role='alert'>" +
@@ -34,20 +48,23 @@ function getLocationByZipCode(zipcode) {
                         result.response.error.description +
                         "</div>");
                     $("#weatherModal").modal('hide');
+                    $('#refreshWeatherButton').find('span').removeClass('glyphicon-refresh-animate');
+
                 } else {
-                    console.log(result.location.l);
+                    console.log(result.location);
                     getCurrentConditionWeather(result.location.l);
                 }
             })
 
     .fail(function() {
-    	$("#weatherContent").empty();
+        $("#weatherContent").empty();
         $("#weatherContent").append(
             "<div class='alert alert-warning alert-dismissible' role='alert'>" +
             "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>" +
             result.response.error.description +
             "</div>");
         $("#weatherModal").modal('hide');
+        $('#refreshWeatherButton').find('span').removeClass('glyphicon-refresh-animate');
     });
 }
 
@@ -63,37 +80,31 @@ function getCurrentConditionWeather(location) {
             function(result) {
                 console.log(result);
                 if (result.current_observation != null) {
-                	$("#weatherContent").empty();
+                    $("#weatherContent").empty();
                     console.log(result.current_observation);
                     $("#weatherContent").append(
-                        "<div class='row'>" +
-                        "<div class='col-md-4'>" + result.current_observation.display_location.full + "</div>" +
-                        "<div class='col-md-4'>" + result.current_observation.weather + "</div>" + 
-                        "<div class='col-md-4'>" + result.current_observation.temperature_string + "</div>" +
-                        "</div>");
+                        "<img class='' src='" + result.current_observation.icon_url + "'>" +
+                        "<h4 class=''>" + result.current_observation.weather + "</h4>" +
+                        "<h3 class=''>" + result.current_observation.temperature_string + "</h3>");
                     $("#weatherContent").append(
                         "<div class='row'>" +
-                        	"<img src='" + result.current_observation.image.url + "'" + "class='img-rounded'>" +
+                        "<img src='" + result.current_observation.image.url + "'" + "class='img-rounded'>" +
                         "</div>");
+                    $("#weatherHeading").text(result.current_observation.display_location.full);
                 } else {
-                	$("#weatherContent").empty();
+                    $("#weatherContent").empty();
                     $("#weatherContent").append(
                         "<div class='alert alert-warning alert-dismissible' role='alert'>" +
                         "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>" +
                         result.response.error.description +
                         "</div>");
-
+                    $("#weatherHeading").text("Weather");
                 }
-                $("#weatherModal").modal('hide');
+                $('#refreshWeatherButton').find('span').removeClass('glyphicon-refresh-animate');
             })
 
     .fail(function() {
-    	$("#weatherContent").empty();
-        $("#weatherContent").append(
-            "<div class='alert alert-warning alert-dismissible' role='alert'>" +
-            "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>" +
-            result.response.error.description +
-            "</div>");
-        $("#weatherModal").modal('hide');
+        console.log("getCurrentConditionWeather failed");
+        $('#refreshWeatherButton').find('span').removeClass('glyphicon-refresh-animate');
     });
 }
