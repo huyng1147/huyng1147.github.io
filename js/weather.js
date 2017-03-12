@@ -19,7 +19,7 @@ $("#saveZipcodeButton").on("click", function(event) {
 function getLocationByZipCode(zipcode) {
     $.ajax({
             type: "POST",
-            url: WU_APIURL + WU_APIKEY + "/geolookup/q/" + zipcode + ".json",
+            url: WU_APIURL + WU_APIKEY + "/geolookup/q/" + zipcode + ".jsonp",
             dataType: "json",
             contentType: "application/json",
             data: JSON.stringify({})
@@ -56,7 +56,7 @@ function getCurrentConditionWeather(location) {
             type: "POST",
             url: WU_APIURL + WU_APIKEY + "/conditions" + location + ".json",
             dataType: "json",
-            contentType: "application/json",
+            contentType: "application/jsonp",
             data: JSON.stringify({})
         })
         .done(
