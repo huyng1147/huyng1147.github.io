@@ -2,7 +2,7 @@
 // http://api.wunderground.com/api/1fa797835d7116aa/geolookup/q/94107.json
 
 const WU_APIKEY = "1fa797835d7116aa";
-const WU_APIURL = "http://api.wunderground.com/api/";
+const WU_APIURL = "https://api.wunderground.com/api/";
 
 // Shorthand for $( document ).ready()
 $(function() {
