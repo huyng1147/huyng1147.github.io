@@ -7,6 +7,17 @@ body {
 	padding-right: 5px;
 }
 
+div#weatherModal.modal.fade.in {
+	padding-right: 0px !important;
+}
+
+.invisiblePanel {
+	background: transparent;;
+	border-radius: 0px;
+	border: none;
+	box-shadow: none;
+}
+
 .infoPanel, .summaryPanel {
 	margin: 20px;
 	margin-top: 0px;
@@ -15,11 +26,6 @@ body {
 .infoPanel .list-group-item, .summaryPanel .list-group-item {
 	border: none;
 }
-
-/*.summaryPanel li {
-    display: block;
-}
-*/
 
 .summaryPanel li:before {
     /*Using a Bootstrap glyphicon as the bullet point*/
@@ -54,7 +60,6 @@ body {
 }
 
 .quotePanel {
-	border: none;
 	margin: 5px;
 }
 
@@ -64,7 +69,8 @@ body {
 
 .quoteInner {
 	border-radius: 5px;
-	border: 1px solid gray;
+	/*border: 1px solid gray;*/
+	border: none;
 }
 
 .quoteInner .item {
