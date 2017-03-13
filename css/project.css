@@ -3,7 +3,7 @@
 	background: #134E5E;
 	margin-left: 20px;
 	margin-right: 20px;
-	
+
 }
 
 .media {
@@ -31,4 +31,9 @@
 	/*max-height: 160px;*/
 	text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.bookPanel {
+    margin: 20px;
+	margin-top: 30px;
 }

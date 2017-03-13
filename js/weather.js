@@ -21,6 +21,10 @@ $('#weatherModal').on('shown.bs.modal', function() {
 
 $('#refreshWeatherButton').on('click', function(event) {
     $('#refreshWeatherButton').find('span').addClass('glyphicon-refresh-animate');
+    if(currentZipcodeLocation == null) {
+        //Load Bowling Green, KY zipcode
+        currentZipcodeLocation = 42101;
+    }
     getLocationByZipCode(currentZipcodeLocation);
 });
 

@@ -2,281 +2,334 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Huy Nguyen</title>
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Huy Nguyen</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-  <!-- MAIN PAGE -->
-  <div id="nav">
-    <div class="navbar navbar-default navbar-static navbar-fixed-top">
-      <div class="container-fluid navContainer">
-        <!-- Navigation Bar Header -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <!-- MAIN PAGE -->
+    <div id="nav">
+        <div class="navbar navbar-default navbar-static navbar-fixed-top">
+            <div class="container-fluid navContainer">
+                <!-- Navigation Bar Header -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand active" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden='true'></span></a>
-        </div>
-        <!-- Navigation Bar After Collapse -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <!-- Navigation Bar Left -->
-          <ul class="nav navbar-nav navbar-left">
-            <li><a class="" href="project.html">My Project</a></li>
-            <!-- <li><a href="project.html">Project</a></li> -->
-          </ul>
-          <!-- Navigation Bar Right -->
-          <ul class="nav navbar-nav navbar-right">
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.navbar -->
-    </div>
-    <div class="panel panel-default panel-primary infoPanel">
-      <div class="panel-body" style="text-align: center;">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="panel panel-default panel-primary">
-                <div class="panel-body">
-                  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators" style="display: none">
-                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    </ol>
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner quoteInner" role="listbox">
-                      <div class="item active" style="padding: 20px;text-align: center; border-radius: 5px">
-                        <blockquote>
-                          <p><strong>“Everything will be okay in the end. If it's not okay, it's not the end.”</strong></p>
-                          <footer>
-                            <p><i>John Lennon</i></p>
-                          </footer>
-                        </blockquote>
-                        <!-- <div class="carousel-caption">
-                    </div> -->
-                      </div>
-                      <div class="item" style="padding: 20px;text-align: center;">
-                        <blockquote>
-                          <p><strong>"First, solve the problem. Then, write the code."</strong></p>
-                          <footer>
-                            <p><i>John Johnson</i></p>
-                          </footer>
-                        </blockquote>
-                        <!-- <div class="carousel-caption">
-                    </div> -->
-                      </div>
-                    </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                      <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
+                    <a class="navbar-brand active" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden='true'></span></a>
                 </div>
-              </div>
+                <!-- Navigation Bar After Collapse -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!-- Navigation Bar Left -->
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a class="" href="project.html">MY PROJECT</a></li>
+                        <!-- <li><a href="project.html">Project</a></li> -->
+                    </ul>
+                    <!-- Navigation Bar Right -->
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <div class="col-md-6">
-              <div class="panel panel-default panel-primary">
-                <div class="panel-heading">
-                  <h4 id="weatherHeading" class="panel-title pull-left" style="padding-top:12px;">Weather</h4>
-                  <div class="input-group">
-                    <div class="input-group-btn">
-                      <button type="button" class="btn btn-warning btn-lg pull-right" data-toggle="modal" data-target="#weatherModal">
+            <!-- /.navbar -->
+        </div>
+        <div class="panel panel-default panel-primary infoPanel">
+            <div class="panel-body" style="text-align: center;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default panel-primary">
+                                <div class="panel-body">
+                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators" style="display: none">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                        </ol>
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner quoteInner" role="listbox">
+                                            <div class="item active" style="padding: 20px;text-align: center; border-radius: 5px">
+                                                <blockquote class="blockquote-reverse">
+                                                    <p><strong>“Everything will be okay in the end. If it's not okay, it's not the end.”</strong></p>
+                                                    <footer>
+                                                        <i>John Lennon</i>
+                                                    </footer>
+                                                </blockquote>
+                                                <!-- <div class="carousel-caption">
+                    </div> -->
+                                            </div>
+                                            <div class="item" style="padding: 20px;text-align: center;">
+                                                <blockquote class="blockquote-reverse">
+                                                    <p><strong>"First, solve the problem. Then, write the code."</strong></p>
+                                                    <footer>
+                                                        <i>John Johnson</i>
+                                                    </footer>
+                                                </blockquote>
+                                                <!-- <div class="carousel-caption">
+                    </div> -->
+                                            </div>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                            <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                            <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default panel-primary">
+                                <div class="panel-heading">
+                                    <h4 id="weatherHeading" class="panel-title pull-left" style="padding-top:14px; padding-left: 15px;">WEATHER</h4>
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-warning btn-lg pull-right circleButton" data-toggle="modal" data-target="#weatherModal" autocomplete="off" aria-pressed="true">
                         <span class="glyphicon glyphicon-pencil" aria-hidden='true'></span>
                       </button>
-                      <button type="button" id="refreshWeatherButton" class="btn btn-success btn-lg pull-right">
+                                            <button type="button" id="refreshWeatherButton" class="btn btn-success btn-lg pull-right circleButton" autocomplete="off" aria-pressed="true">
                         <span class="glyphicon glyphicon-refresh" aria-hidden='true'></span>
                       </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="weatherContent" class="panel-body" style="text-align: center;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div id="weatherContent" class="panel-body" style="text-align: center;">
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="panel panel-default panel-primary infoPanel">
-      <div class="panel-heading">
-        <h3 class="panel-title">CONTACT INFORMATON</h3>
-      </div>
-      <div class="panel-body" style="text-align: center;">
-        <h4 class="list-group-item-heading">HUY MANH NGUYEN</h4>
-        <h5><span class="glyphicon glyphicon-home"></span> 557 TopMiller Ave, Apt E5, Bowling Green, KY 42101</h5>
-        <h5><span class="glyphicon glyphicon-phone"></span> 270-935-0001</h5>
-        <h5><span class="glyphicon glyphicon-envelope"></span> huy.ng1147@gmail.com</h5>
-      </div>
-    </div>
-    <div class="panel panel-default panel-primary summaryDiv">
-      <ul class="nav nav-tabs summaryTab">
-        <li class="active"><a data-toggle="tab" href="#summary">Summary</a></li>
-        <li><a data-toggle="tab" href="#technical">Technical Skills</a></li>
-      </ul>
-      <div class="tab-content summaryContent">
-        <div id="summary" class="tab-pane fade in active">
-          <div class="panel panel-default panel-primary summaryPanel">
-            <!-- <div class="panel-heading">
+        <div class="panel panel-default panel-primary infoPanel">
+            <div class="panel-heading">
+                <h3 class="panel-title">CONTACT INFORMATON</h3>
+            </div>
+            <div class="panel-body" style="text-align: center;">
+                <img class="img-thumbnail" src="img/avatar.jpg" style="width: 80px; margin-left: auto; margin-right: auto; margin-bottom: 10px;">
+                <h4 class="list-group-item-heading">HUY MANH NGUYEN</h4>
+                <address>
+                  <span class="glyphicon glyphicon-home"></span> 557 TopMiller Ave, Apt E5<br>
+                  Bowling Green, KY 42101<br>
+                  <abbr title="Phone"><span class="glyphicon glyphicon-phone"></span> P:</abbr> 270-935-0001<br>
+                  <span class="glyphicon glyphicon-envelope"></span> huy.ng1147@gmail.com
+                </address>
+            </div>
+        </div>
+        <div class="panel panel-default panel-primary summaryDiv">
+            <ul class="nav nav-tabs summaryTab">
+                <li class="active"><a data-toggle="tab" href="#summary">Summary</a></li>
+                <li><a data-toggle="tab" href="#technical">Technical Skills</a></li>
+            </ul>
+            <div class="tab-content summaryContent">
+                <div id="summary" class="tab-pane fade in active">
+                    <div class="panel panel-default panel-primary summaryPanel">
+                        <!-- <div class="panel-heading">
               <h3 class="panel-title">SUMMARY</h3>
             </div> -->
-            <div class="panel-body">
-              <ul class="list-group">
-                <li class="list-group-item">Developer of mobile app <strong>“iTracking”</strong> for Apple Devices
-                  <a href="https://itunes.apple.com/us/app/itracking/id592995566">(Link Here)</a>.
-                </li>
-                <li class="list-group-item">
-                  Experience in developing iOS application using <strong>Google Maps, Apple APIs</strong>.
-                </li>
-                <li class="list-group-item">
-                  Experience in developing mobile application using Web-based technologies <strong>Cordova</strong>.
-                </li>
-                <li class="list-group-item">
-                  Extensive experience in developing Enterprise applications using technologies like <strong>JSP, Servlet, PrimeFaces, JSF</strong>.
-                </li>
-                <li class="list-group-item">
-                  Proficient with Web Page Development using <strong>HTML, JavaScript, CSS, AJAX, jQuery, jQuery Mobile</strong> and <strong>JSON</strong>.
-                </li>
-                <li class="list-group-item">
-                  Well versed with J2EE design Patterns like <strong>Session Façade, Data Access Object (DAO)</strong> and <strong>Business Delegate</strong>.
-                </li>
-                <li class="list-group-item">
-                  Participated in <strong>AGILE Development</strong> methodology.
-                </li>
-                <li class="list-group-item">
-                  Experience in developing web service <strong>RESTful</strong>
-                </li>
-                <li class="list-group-item">
-                  Experience of working with Application servers, Web serves like <strong>Apache Tomcat</strong>.
-                </li>
-                <li class="list-group-item">
-                  Experience in using <strong>Log4j</strong> and <strong>Maven</strong>.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div id="technical" class="tab-pane fade">
-          <div class="panel panel-default panel-primary summaryPanel">
-            <!-- <div class="panel-heading">
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Developer of mobile app <strong>“iTracking”</strong> for Apple Devices
+                                    <a href="https://itunes.apple.com/us/app/itracking/id592995566">(Link Here)</a>.
+                                </li>
+                                <li class="list-group-item">
+                                    Experience in developing iOS application using <strong>Google Maps, Apple APIs</strong>.
+                                </li>
+                                <li class="list-group-item">
+                                    Experience in developing mobile application using Web-based technologies <strong>Cordova</strong>.
+                                </li>
+                                <li class="list-group-item">
+                                    Extensive experience in developing Enterprise applications using technologies like <strong>JSP, Servlet, PrimeFaces, JSF</strong>.
+                                </li>
+                                <li class="list-group-item">
+                                    Proficient with Web Page Development using <strong>HTML, JavaScript, CSS, AJAX, jQuery, jQuery Mobile</strong> and <strong>JSON</strong>.
+                                </li>
+                                <li class="list-group-item">
+                                    Well versed with J2EE design Patterns like <strong>Session Façade, Data Access Object (DAO)</strong> and <strong>Business Delegate</strong>.
+                                </li>
+                                <li class="list-group-item">
+                                    Participated in <strong>AGILE Development</strong> methodology.
+                                </li>
+                                <li class="list-group-item">
+                                    Experience in developing web service <strong>RESTful</strong>
+                                </li>
+                                <li class="list-group-item">
+                                    Experience of working with Application servers, Web serves like <strong>Apache Tomcat</strong>.
+                                </li>
+                                <li class="list-group-item">
+                                    Experience in using <strong>Log4j</strong> and <strong>Maven</strong>.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="technical" class="tab-pane fade">
+                    <div class="panel panel-default panel-primary summaryPanel">
+                        <!-- <div class="panel-heading">
               <h3 class="panel-title">TECHNICAL SKILLS</h3>
             </div> -->
-            <div class="panel-body">
-              <table class="table table-bordered table-hover">
-                <tbody>
-                  <tr>
-                    <td>Programming Language</td>
-                    <td><strong>Java, C, C++, Objective C, Swift, HTML, CSS</strong></td>
-                  </tr>
-                  <tr>
-                    <td>J2EE Technologies</td>
-                    <td><strong>JSP, JSF, PrimeFaces</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Web Technologies</td>
-                    <td><strong>JavaScript, CSS, JSON</strong></td>
-                  </tr>
-                  <tr>
-                    <td>XML Technologies</td>
-                    <td><strong>JSON, DOM Parser</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Databases</td>
-                    <td><strong>MySQL</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Development Tools</td>
-                    <td><strong>Eclipse</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Platforms</td>
-                    <td><strong>Windows, MacOS, Linux</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Web/App Servers</td>
-                    <td><strong>Apache Tomcat</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Design Patterns</td>
-                    <td><strong>Model View Controller, Singleton, Front Controller, Session Façade, DAO Patterns</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Web Services</td>
-                    <td><strong>RESTful</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Mobile Programming</td>
-                    <td><strong>iOS, Cordova</strong></td>
-                  </tr>
-                </tbody>
-              </table>
+                        <div class="panel-body">
+                            <table class="table table-bordered table-hover table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>Programming Language</td>
+                                        <td><strong>Java, C, C++, Objective C, Swift, HTML, CSS</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>J2EE Technologies</td>
+                                        <td><strong>JSP, JSF, PrimeFaces</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web Technologies</td>
+                                        <td><strong>JavaScript, CSS, JSON</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>XML Technologies</td>
+                                        <td><strong>JSON, DOM Parser</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Databases</td>
+                                        <td><strong>MySQL</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Development Tools</td>
+                                        <td><strong>Eclipse</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Platforms</td>
+                                        <td><strong>Windows, MacOS, Linux</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web/App Servers</td>
+                                        <td><strong>Apache Tomcat</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Design Patterns</td>
+                                        <td><strong>Model View Controller, Singleton, Front Controller, Session Façade, DAO Patterns</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web Services</td>
+                                        <td><strong>RESTful</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mobile Programming</td>
+                                        <td><strong>iOS, Cordova</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="panel panel-default panel-primary infoPanel">
-      <div class="panel-heading">
-        <h3 class="panel-title">PROFESSIONAL EXPERIENCE</h3>
-      </div>
-      <div class="panel-body">
-      </div>
-    </div>
-    <!-- MODAL -->
-    <div class="modal fade" id="weatherModal" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-              <span class="sr-only">Close</span>
-            </button>
-            <h4 class="modal-title">Enter ZipCode Location</h4>
-          </div>
-          <div class="modal-body">
-            <input id="zipcodeInput" style="width: 100%" type="text">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button id="saveZipcodeButton" type="button" class="btn btn-primary">Save changes</button>
-          </div>
+        <div class="panel panel-default panel-primary infoPanel">
+            <div class="panel-heading">
+                <h3 class="panel-title">PROFESSIONAL EXPERIENCE</h3>
+            </div>
+            <div class="panel-body">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default summaryPanel">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  <h4>Graduate Assistant, Developer</h4>
+                            <h5>Department of Computer Science and Mathematics, WKU, Bowling Green, KY, US (Aug 2014 – Dec 2016)</h5>
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item lead"><strong>Bingocize:</strong> Bingocize is a web application designed to increase the physical fitness, health knowledge, and social engagement of older adults. We developed a prototype of mobile version of Bingocize.
+                                        We used several technologies like <mark>JavaScript, jQuery, jQuery Mobile, AJAX, Cordova</mark> for front end development. Also, <mark>RESTful</mark> web service is used for mobile server communication.
+                                    </li>
+                                    <li class="list-group-item lead"><strong>Mobile Application for Interactive Communication: </strong> This project is from my thesis research in masters, I developed a framework which help administrators can create questions, surveys to collect data
+                                        from participants. Improving interactive communication by providing email, text message and notifications.
+                                    </li>
+                                    <li class="list-group-item lead"><strong>Learning Management System: </strong> my recent project working with Dr. Guangming Xing. We developed a web application that provides computer science’s student with a platform for communication and doing homework.
+                                        CS students can read the book and do the coding directly on the website. The assignment is automatically graded. It also provides questions and answers to improve the communication between students and instructors.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default summaryPanel">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h4>iOS Developer</h4>
+                            <h5>DigitalGPS (DinhViSo), Ho Chi Minh City, Vietnam (2012 -2013)</h5>
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item lead"><strong>iTracking: </strong> iTracking is a mobile application that I developed by myself to monitor the GPS, history, stats, and statuses of cars that uses company’s tracking devices in the real time. It can also export
+                                        the data as document such as pdf for sharing.
+                                    </li>
+                                    <li class="list-group-item lead"><strong>GoldIM: </strong> GoldIM is an application allows users to use multiple instant messenger services such as Yahoo Messenger, Facebook Messenger, or Skype. I developed some features that allow users to share files
+                                        through Dropbox or Box services. Also, help to fix bugs, improve the interface and performance of the application.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- /.modal-content -->
-      </div>
-      <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-    <!-- JS File -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- jQuery Mobile-->
-    <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
-    <!-- Local JavaScript -->
-    <script src="js/weather.js"></script>
+        <!-- MODAL -->
+        <div class="modal fade" id="weatherModal" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                          <span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title">Enter ZipCode Location</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input id="zipcodeInput" style="width: 100%" type="text">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="saveZipcodeButton" type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <!-- JS File -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- jQuery Mobile-->
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+        <!-- Local JavaScript -->
+        <script src="js/weather.js"></script>
 </body>
 
 </html>
