@@ -10,6 +10,7 @@
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
+  <link href="css/project.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -48,234 +49,74 @@
       </div>
       <!-- /.navbar -->
     </div>
-    <div class="panel panel-default panel-primary infoPanel">
-      <div class="panel-body" style="text-align: center;">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="panel panel-default panel-primary">
-                <div class="panel-body">
-                  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators" style="display: none">
-                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    </ol>
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner quoteInner" role="listbox">
-                      <div class="item active" style="padding: 20px;text-align: center; border-radius: 5px">
-                        <blockquote>
-                          <p><strong>“Everything will be okay in the end. If it's not okay, it's not the end.”</strong></p>
-                          <footer>
-                            <p><i>John Lennon</i></p>
-                          </footer>
-                        </blockquote>
-                        <!-- <div class="carousel-caption">
-                    </div> -->
-                      </div>
-                      <div class="item" style="padding: 20px;text-align: center;">
-                        <blockquote>
-                          <p><strong>"First, solve the problem. Then, write the code."</strong></p>
-                          <footer>
-                            <p><i>John Johnson</i></p>
-                          </footer>
-                        </blockquote>
-                        <!-- <div class="carousel-caption">
-                    </div> -->
-                      </div>
-                    </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                      <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                      <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+  </div>
+  <div id="carousel-example-generic" class="carousel slide carouselBanner" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators" style="margin-top: 50px;">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="container-fluid bannerContainerFluid">
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object media-object-image" src="img/java.png" style="width: 80px;">
+              </a>
             </div>
-            <div class="col-md-6">
-              <div class="panel panel-default panel-primary">
-                <div class="panel-heading">
-                  <h4 id="weatherHeading" class="panel-title pull-left" style="padding-top:12px;">WEATHER INFORMATON</h4>
-                  <div class="input-group">
-                      <div class="input-group-btn">
-                          <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#weatherModal">
-                          <span class="glyphicon glyphicon-pencil" aria-hidden='true'></span>
-                        </button>
-                      </div>
-                  </div>
-                  
-                 
-                </div>
-                <div id="weatherContent" class="panel-body" style="text-align: center;">
-                </div>
-              </div>
+            <div class="media-body">
+              <h4 class="media-heading">CS 180 - Java Programming</h4>
+              <p>A study of software engineering techniques for the development, maintenance, and evolution of large software systems. Topics include requirements and specification; system design and implementation; debugging, testing, and quality assurance; reengineering; project management; software process; tools; and environments.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="panel panel-default panel-primary infoPanel">
-      <div class="panel-heading">
-        <h3 class="panel-title">CONTACT INFORMATON</h3>
-      </div>
-      <div class="panel-body" style="text-align: center;">
-        <h4 class="list-group-item-heading">HUY MANH NGUYEN</h4>
-        <h5><span class="glyphicon glyphicon-home"></span> 557 TopMiller Ave, Apt E5, Bowling Green, KY 42101</h5>
-        <h5><span class="glyphicon glyphicon-phone"></span> 270-935-0001</h5>
-        <h5><span class="glyphicon glyphicon-envelope"></span> huy.ng1147@gmail.com</h5>
-      </div>
-    </div>
-    <div class="panel panel-default panel-primary summaryDiv">
-      <ul class="nav nav-tabs summaryTab">
-        <li class="active"><a data-toggle="tab" href="#summary">Summary</a></li>
-        <li><a data-toggle="tab" href="#technical">Technical Skills</a></li>
-      </ul>
-      <div class="tab-content summaryContent">
-        <div id="summary" class="tab-pane fade in active">
-          <div class="panel panel-default panel-primary summaryPanel">
-            <!-- <div class="panel-heading">
-              <h3 class="panel-title">SUMMARY</h3>
-            </div> -->
-            <div class="panel-body">
-              <ul class="list-group">
-                <li class="list-group-item">Developer of mobile app <strong>“iTracking”</strong> for Apple Devices
-                  <a href="https://itunes.apple.com/us/app/itracking/id592995566">(Link Here)</a>.
-                </li>
-                <li class="list-group-item">
-                  Experience in developing iOS application using <strong>Google Maps, Apple APIs</strong>.
-                </li>
-                <li class="list-group-item">
-                  Experience in developing mobile application using Web-based technologies <strong>Cordova</strong>.
-                </li>
-                <li class="list-group-item">
-                  Extensive experience in developing Enterprise applications using technologies like <strong>JSP, Servlet, PrimeFaces, JSF</strong>.
-                </li>
-                <li class="list-group-item">
-                  Proficient with Web Page Development using <strong>HTML, JavaScript, CSS, AJAX, jQuery, jQuery Mobile</strong> and <strong>JSON</strong>.
-                </li>
-                <li class="list-group-item">
-                  Well versed with J2EE design Patterns like <strong>Session Façade, Data Access Object (DAO)</strong> and <strong>Business Delegate</strong>.
-                </li>
-                <li class="list-group-item">
-                  Participated in <strong>AGILE Development</strong> methodology.
-                </li>
-                <li class="list-group-item">
-                  Experience in developing web service <strong>RESTful</strong>
-                </li>
-                <li class="list-group-item">
-                  Experience of working with Application servers, Web serves like <strong>Apache Tomcat</strong>.
-                </li>
-                <li class="list-group-item">
-                  Experience in using <strong>Log4j</strong> and <strong>Maven</strong>.
-                </li>
-              </ul>
+      <div class="item">
+        <div class="container-fluid bannerContainerFluid">
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="img/python.png" style="width: 80px;">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">CS 170 - Python Programming</h4>
+              <p>In CS 170, we will help you to build foundational skills and knowledge that we believe you need to have a successful career and life. Whatever your major is, you must be able to communicate effectively, think critically, and make right and logical decisions. Mastering coding through taking CS 170 course can instill student's critical thinking, logical reasoning and problem solving skills.</p>
             </div>
           </div>
         </div>
-        <div id="technical" class="tab-pane fade">
-          <div class="panel panel-default panel-primary summaryPanel">
-            <!-- <div class="panel-heading">
-              <h3 class="panel-title">TECHNICAL SKILLS</h3>
-            </div> -->
-            <div class="panel-body">
-              <table class="table table-bordered table-hover">
-                <tbody>
-                  <tr>
-                    <td>Programming Language</td>
-                    <td><strong>Java, C, C++, Objective C, Swift, HTML, CSS</strong></td>
-                  </tr>
-                  <tr>
-                    <td>J2EE Technologies</td>
-                    <td><strong>JSP, JSF, PrimeFaces</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Web Technologies</td>
-                    <td><strong>JavaScript, CSS, JSON</strong></td>
-                  </tr>
-                  <tr>
-                    <td>XML Technologies</td>
-                    <td><strong>JSON, DOM Parser</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Databases</td>
-                    <td><strong>MySQL</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Development Tools</td>
-                    <td><strong>Eclipse</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Platforms</td>
-                    <td><strong>Windows, MacOS, Linux</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Web/App Servers</td>
-                    <td><strong>Apache Tomcat</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Design Patterns</td>
-                    <td><strong>Model View Controller, Singleton, Front Controller, Session Façade, DAO Patterns</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Web Services</td>
-                    <td><strong>RESTful</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Mobile Programming</td>
-                    <td><strong>iOS, Cordova</strong></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+        <div class="carousel-caption">
         </div>
       </div>
     </div>
-    <div class="panel panel-default panel-primary infoPanel">
-      <div class="panel-heading">
-        <h3 class="panel-title">PROFESSIONAL EXPERIENCE</h3>
-      </div>
-      <div class="panel-body">
-      </div>
+    <div class="carousel-caption">
     </div>
-    <!-- MODAL -->
-    <div class="modal fade" id="weatherModal" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-              <span class="sr-only">Close</span>
-            </button>
-            <h4 class="modal-title">Enter ZipCode Location</h4>
-          </div>
-          <div class="modal-body">
-            <input id="zipcodeInput" style="width: 100%" type="text">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button id="saveZipcodeButton" type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-        <!-- /.modal-content -->
-      </div>
-      <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal -->
-    <!-- JS File -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- jQuery Mobile-->
-    <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
-    <!-- Local JavaScript -->
-    <script src="js/weather.js"></script>
+  </div>
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+  <!-- /.modal -->
+  <!-- JS File -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-toolkit.min.js"></script>
+  <!-- jQuery Mobile-->
+  <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+  <!-- Local JavaScript -->
+  <script src="js/weather.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

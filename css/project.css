@@ -1,0 +1,34 @@
+.carouselBanner {
+	/*max-height: 300px;*/
+	background: #134E5E;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+}
+
+.media {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-height: 200px;
+	color: white;
+}
+
+.bannerContainerFluid img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bannerContainerFluid {
+	margin-top: 15px;
+    margin-bottom: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: black;
+    /*max-height: 200px;*/
+}
+
+.bannerContainerFluid > .media >.media-body> p {
+	/*max-height: 160px;*/
+	text-overflow: ellipsis;
+    overflow: hidden;
+}

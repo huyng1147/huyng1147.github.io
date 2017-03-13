@@ -6,12 +6,6 @@ const WU_APIURL = "https://api.wunderground.com/api/";
 
 var currentZipcodeLocation;
 
-// Shorthand for $( document ).ready()
-$(function() {
-    console.log("ready");
-    currentZipcodeLocation = 42101;
-    // getLocationByZipCode(currentZipcodeLocation);
-});
 
 $("#saveZipcodeButton").on("click", function(event) {
     /* Act on the event */

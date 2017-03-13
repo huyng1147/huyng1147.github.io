@@ -16,6 +16,10 @@ body {
 	background-color: #3498db;
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+	background: white;
+}
+
 /*Spinner*/
 .glyphicon-refresh-animate {
     -animation: spin .7s infinite linear;
