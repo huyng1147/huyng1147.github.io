@@ -10,6 +10,9 @@ $(function() {
     getScheduleCurrentDate();
 });
 
+ 
+
+
 function getScheduleCurrentDate() {
     var date = new Date();
     var dd = date.getDate();
@@ -23,9 +26,7 @@ function getScheduleCurrentDate() {
     }
     $.ajax({
             type: "GET",
-            url: "https://api.tvmaze.com/schedule?country=US&date=2017-04-11", //TVMAZE_URL + yyyy + '-' + mm + '-' + dd,
-            dataType: "JSON",
-            contentType: "application/json"
+            url: TVMAZE_URL + yyyy + '-' + mm + '-' + dd,
         })
     .done(
         function(result) {
@@ -33,22 +34,20 @@ function getScheduleCurrentDate() {
             if (result.code == 0) {
                 console.log("error");
             } else {
-                var all = $.parseJSON(result);
-                for (var i = 0; i < all.length; i++) {
-                    var show = all[i];
+                for (var i = 0; i < result.length; i++) {
+                    var show = result[i];
                     console.log(show);
-
-                    // $("#tvschedule").append(
-                    //     '<div class="panel panel-default panel-primary">' +
-                    //         '<div class="panel-heading">' +
-                    //             '<h3 class="panel-title">' + show.show.name + '</h3>' +
-                    //         '</div>' +
-                    //         // '<div class="panel-body">' +
-                    //         //     '<div>Title: ' + show.name + '</div>' + 
-                    //         //     '<div>Season: ' + show.season + '</div>' + 
-                    //         //     '<div>Episode: ' + show.number + '</div>' + 
-                    //         // '</div>' +
-                    //     '</div>')
+                    $("#tvschedule").append(
+                        '<div class="panel panel-default panel-primary">' +
+                            '<div class="panel-heading">' +
+                                '<h3 class="panel-title">' + show.show.name + '</h3>' +
+                            '</div>' +
+                            '<div class="panel-body">' +
+                                '<div>Title: ' + show.name + '</div>' + 
+                                '<div>Season: ' + show.season + '</div>' + 
+                                '<div>Episode: ' + show.number + '</div>' + 
+                            '</div>' +
+                        '</div>')
                 }
             }
         })
