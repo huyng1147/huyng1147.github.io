@@ -8,6 +8,7 @@ const TVMAZE_URL_EPISODE = "https://api.tvmaze.com/shows/";
 
 var currentday;
 var $gridshow = $("#tvschedule");
+var $gridepisode = $("#tvshow");
 
 function getDateStringFromDate(date) {
     var dd = date.getDate();
@@ -53,11 +54,20 @@ $(function() {
     });
 
     $(".todayheading").click(function(event) {
-        console.log("aaaa");
         $("#tvschedule").removeClass("hidden");
         $("#tvshow").addClass("hidden");
         getScheduleCurrentDate(currentday);
         $(".todayheading").text(getHeadingDateStringFromDate(currentday));
+    });
+
+    $("#backBtn").click(function(event) {
+        $("#tvschedule").removeClass("hidden");
+        $("#tvshow").addClass("hidden");
+        $("#backBtn").parent().addClass("hidden");
+        $("#preBtn").parent().removeClass("hidden");
+        $("#nextBtn").parent().removeClass("hidden");
+        $(".todayheading").parent().removeClass("hidden");
+        getScheduleCurrentDate(currentday);
     });
 });
 
@@ -82,6 +92,10 @@ function getSchedulePreDate() {
 
 function getShowEpisode(showId) {
     $("#tvshow").removeClass("hidden");
+    $gridepisode.masonry({
+        transitionDuration: '0.4s',
+        initLayout: false
+    });
     $.ajax({
             type: "GET",
             url: TVMAZE_URL_EPISODE + showId + "/episodes"
@@ -92,7 +106,7 @@ function getShowEpisode(showId) {
                 if (result.code == 0) {
                     console.log("error");
                 } else {
-                    for (var i = 0; i < result.length; i++) {
+                    for (var i = result.length - 1; i >= 0; i--) {
                         var show = result[i];
                         var image = show.image;
                         if (image != null) {
@@ -113,6 +127,13 @@ function getShowEpisode(showId) {
                         } else {
                             showseason = show.season;
                         }
+                        var summary;
+                        if (show.summary == null || show.summary == "") {
+                            summary = "N/A";
+                        } else {
+                            summary = show.summary;
+                        }
+
                         var $items = $('<div class="col-sm-12">' +
                                     '<div id="' + show.id +'" class="panel panel-primary" style="margin-bottom: 10px; margin-top: 10px;">' +
                                         '<div class="panel-heading">' +
@@ -125,7 +146,7 @@ function getShowEpisode(showId) {
                                                 '<h5>Air Time: ' + show.airtime + '</h5>' +
                                                 '<h5>Air Day: ' + show.airdate + '</h5>' +
                                                 '<h5>Runtime: ' + show.runtime + ' min</h5>' +
-                                                '<div class="summary" style="font-size:16px;"><strong>Summary:</strong> ' + show.summary + '</div>' +
+                                                '<div class="summary" style="font-size:16px;"><strong>Summary:</strong> ' + summary + '</div>' +
                                             '</div>' +
                                             '<div class="col-lg-4">' +
                                                 '<img class="img-responsive" src="' + image + '"></img>' +
@@ -133,8 +154,9 @@ function getShowEpisode(showId) {
                                         '</div>' +
                                     '</div>' +
                                 '</div>');
-                        $("#tvshow").append($items);
+                        $gridepisode.append($items).masonry('prepended', $items);
                     }
+                    $gridepisode.masonry();
                 }
             })
         .fail(function() {
@@ -177,7 +199,7 @@ function getScheduleCurrentDate(today) {
                             else {
                                 imdblink = "http://www.imdb.com/title/" + imdblink;
                             }
-                            var $items = $('<div class="col-sm-6">' +
+                            var $items = $('<div class="col-sm-4">' +
                                     '<div id="' + show.id +'" class="panel panel-primary" style="margin-bottom: 10px; margin-top: 10px;">' +
                                         '<div class="panel-heading">' +
                                             '<h3 class="panel-title">' + show.show.name + '</h3>' +
@@ -206,6 +228,10 @@ function getScheduleCurrentDate(today) {
                     $gridshow.masonry();
                     $(".btn.btn-link.episodeBtn").click(function(event) {
                         $("#tvschedule").addClass("hidden");
+                        $("#backBtn").parent().removeClass("hidden");
+                        $("#preBtn").parent().addClass("hidden");
+                        $("#nextBtn").parent().addClass("hidden");
+                        $(".todayheading").parent().addClass("hidden");
                         getShowEpisode(this.id);
                     });
                 }
